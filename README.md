@@ -10,7 +10,16 @@ The solution is divided as following:
 
 AWS service - POST method: https://kke2v6695f.execute-api.us-east-1.amazonaws.com/dev/mutant 
 
-Must be sent DNA in "dna" property inside request BODY in a matrix N x N representation
+Must be sent DNA in "dna" property inside request BODY in a matrix N x N representation as shown below:
+
+{
+  "dna": ["ATGCGA",
+          "CAGTGC",
+          "TTATGT",
+          "AGAAGG",
+          "CCCCTA",
+          "TCACTG"]
+}
 
 ## Part3
 It contains code implementation to retrieve human statistics.
