@@ -1,5 +1,5 @@
 const app = require('../app');
-const stats = require('../PersistenceLayer/humanStatsDB');
+const stats = require('../PersistenceLayer/statsDB');
 
 test('retrieve non existing stats', async() => {
     const expectedValue = {
@@ -20,8 +20,8 @@ test('retrieve existing stats', async() => {
     }
     const statsValues = {
         ID: "stats",
-        mutantCount: 5,
-        humanCount: 10
+        mutants: 5,
+        humans: 10
     };
     stats.getStats = jest.fn(() => statsValues);
     const result = await app.calculateStats();

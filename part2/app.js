@@ -1,6 +1,6 @@
 const mutantController = require('./BusinessLayer/mutant');
 const humanManager = require('./PersistenceLayer/humanDB');
-const statsManager = require('./PersistenceLayer/humanStatsDB');
+const statsManager = require('./PersistenceLayer/statsDB');
 
 const DNAToStr = (adn) => {
     const length = adn.length;
@@ -16,6 +16,7 @@ const isMutantDNA = async(dnaStr, dna) => {
     if(human.Item) {
         result = human.Item.isMutant;
     } else {
+        //should use a transaction to save human DNA and update stats due to data integrity
         result = mutantController.isMutant(dna);
         await humanManager.saveHuman(dnaStr, result);
         const incM = result ? 1 : 0;

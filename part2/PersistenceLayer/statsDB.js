@@ -19,7 +19,6 @@ const updateStats = async(mutants, humans) => {
     try {
         await dynamodb.update(params).promise();
     } catch (err) {
-        console.log(err);
         return err
     }
 }

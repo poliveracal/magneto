@@ -1,7 +1,7 @@
 const app = require('../app');
 const mutantController = require('../BusinessLayer/mutant');
 const humanManager = require('../PersistenceLayer/humanDB');
-const statsManager = require('../PersistenceLayer/humanStatsDB');
+const statsManager = require('../PersistenceLayer/statsDB');
 
 test('converts a matrix into string', () => {
     const matrix = ["ABC", "DEF", "GHI"];

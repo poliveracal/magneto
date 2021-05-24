@@ -1,4 +1,4 @@
-const stats = require('./PersistenceLayer/humanStatsDB');
+const stats = require('./PersistenceLayer/statsDB');
 
 const calculateStats = async() => {
     const data = await stats.getStats();
@@ -10,9 +10,9 @@ const calculateStats = async() => {
 
     if(data){
         result = {
-            "count_mutant_dna" : data.mutantCount,
-            "count_human_dna": data.humanCount,
-            "ratio": data.mutantCount / data.humanCount
+            "count_mutant_dna" : data.mutants,
+            "count_human_dna": data.humans,
+            "ratio": data.mutants / data.humans
         };
     }
 
