@@ -24,8 +24,10 @@ AWS service - GET method: https://kke2v6695f.execute-api.us-east-1.amazonaws.com
 
 ## Installation
 In order to preprare code for run please make sure to download all required packages running the following command in a terminal:
+
 npm install
 
 ## Unit tests
 Once all packages have been downloaded, execute this command on a terminal:
+
 npm run test
